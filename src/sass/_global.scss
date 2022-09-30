@@ -1,0 +1,119 @@
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  border-radius: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif !important;
+  transition: all 0.4s steps(20, end);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+body.dark {
+  .main-heading {
+    color: white;
+    &::first-letter {
+      color: $secondary-color;
+    }
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .filtered-list {
+    background-color: $secondary-color;
+    width: 573px!important;
+    max-width: 90%!important;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 58px auto 151px auto;
+    padding-left: 0;
+    li {
+      margin: 0 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 22px;
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &.active {
+        color: $r-color;
+      }
+    }
+  }
+}
+body.light {
+  .main-heading {
+    color: black;
+    &::first-letter {
+      color: $secondary-color;
+    }
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .filtered-list {
+    background-color: $secondary-color;
+    width: 573px !important;
+    max-width: 90% !important;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 58px auto 151px auto;
+    padding-left: 0;
+    li {
+      margin: 0 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 22px;
+      transition: all 0.3s ease-in-out;
+      color: white;
+      &:hover,
+      &.active {
+        color: $r-color;
+      }
+    }
+  }
+}
+.decor-one,
+.decor-two {
+  width: 277px;
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+button {
+  transition: all 0.3s steps(100);
+  border: none !important;
+  outline: none !important;
+}
+
+.img-container {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+img {
+  user-select: none !important;
+}
