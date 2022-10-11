@@ -33,8 +33,8 @@ body.dark {
   }
   .filtered-list {
     background-color: $secondary-color;
-    width: 573px!important;
-    max-width: 90%!important;
+    width: 573px !important;
+    max-width: 90% !important;
     height: 86px;
     display: flex;
     justify-content: center;
@@ -116,4 +116,20 @@ button {
 
 img {
   user-select: none !important;
+}
+
+.work {
+  .overlay {
+    background: none !important;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $secondary-color;
+      z-index: -1;
+      filter: blur(11px);
+      -webkit-filter: blur(8px);
+    }
+  }
 }
