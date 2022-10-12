@@ -1,5 +1,6 @@
 import "./sass/style.scss";
 import "./validation";
+import "./remove_inspect";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
 import "jquery/dist/jquery.min";
