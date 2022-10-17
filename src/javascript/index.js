@@ -2,7 +2,7 @@ import "../sass/style.scss";
 import "loaders.css/loaders.min.css";
 import "./validation";
 import "./calc_numbers_valid_inupt";
-// import "./remove_inspect";
+import "./remove_inspect";
 import "./loading";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
