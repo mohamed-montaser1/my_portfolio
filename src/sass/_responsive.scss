@@ -1,0 +1,141 @@
+@media (max-width: 991px) {
+  .navbar {
+    .navbar-nav {
+      position: fixed;
+      right: 0;
+      height: 100vh;
+      top: 0;
+      width: 13rem;
+      right: -13rem;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s steps(100, end);
+      gap: 24px;
+    }
+  }
+  body.dark {
+    .navbar {
+      .navbar-nav {
+        background-color: #010101;
+        .toggle-mode {
+          border-top: 1px solid #e4e5f1 !important;
+          padding-top: 13px;
+          border-left: none !important;
+        }
+      }
+    }
+  }
+  body.light {
+    .navbar {
+      .navbar-nav {
+        background-color: #e4e5f1;
+        button {
+          border-top: 1px solid #010101 !important;
+          padding-top: 13px;
+          border-left: none !important;
+        }
+      }
+    }
+  }
+  .about {
+    h3 {
+      text-align: left !important;
+      margin-bottom: 10px !important;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .landing {
+    h1 {
+      font-size: 22px !important;
+      margin-bottom: 30px !important;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar {
+    .container {
+      padding: 0 42px;
+    }
+  }
+  img.decor-one,
+  img.decor-two {
+    display: none;
+  }
+
+  .landing .img-container {
+    max-width: 100%;
+  }
+
+  .about {
+    .container {
+      .col-sm-12 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 46px;
+      }
+    }
+  }
+}
+
+@media (max-width: 542px) {
+  .work {
+    .filtered-list {
+      li {
+        font-size: 15px !important;
+      }
+    }
+  }
+
+  .main-heading {
+    font-size: 37px !important;
+  }
+
+  .work {
+    button.see-more {
+      max-width: 90%;
+      font-size: 14px;
+    }
+  }
+
+  .contact {
+    form {
+      margin-bottom: 82px !important;
+    }
+  }
+
+  footer {
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  footer {
+    img.blob {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 332px) {
+  .filtered-list,
+  .work .filtered-list {
+    li {
+      font-size: 9px !important;
+    }
+  }
+}

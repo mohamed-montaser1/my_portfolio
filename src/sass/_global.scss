@@ -13,7 +13,7 @@
 
 body {
   font-family: "Raleway", sans-serif !important;
-  transition: all 0.4s steps(20, end);
+  transition: all 0.3s ease-in-out;
 }
 
 body,
@@ -91,12 +91,6 @@ body.light {
     }
   }
 }
-.decor-one,
-.decor-two {
-  width: 277px;
-  position: absolute;
-  z-index: -1;
-}
 
 button:hover {
   transform: scale(0.98);
@@ -126,10 +120,21 @@ img {
       width: 100%;
       height: 100%;
       position: absolute;
-      background: $secondary-color;
       z-index: -1;
-      filter: blur(11px);
-      -webkit-filter: blur(8px);
+      background: rgba(213, 100, 101, 0.81);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(2.7px);
+      -webkit-backdrop-filter: blur(2.7px);
     }
   }
+}
+
+section {
+  position: relative;
+}
+
+.about,
+.skills,
+.work {
+  margin-bottom: 146px !important;
 }

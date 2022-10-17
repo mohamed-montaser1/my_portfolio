@@ -1,6 +1,9 @@
-import "./sass/style.scss";
+import "../sass/style.scss";
+import "loaders.css/loaders.min.css";
 import "./validation";
-import "./remove_inspect";
+import "./calc_numbers_valid_inupt";
+// import "./remove_inspect";
+import "./loading";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
 import "jquery/dist/jquery.min";
@@ -10,7 +13,7 @@ import "@fortawesome/fontawesome-free/js/all.min";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({ easing: "linear", delay: 0, duration: 500 });
+AOS.init({ easing: "linear", duration: 500 });
 
 let nav_links = document.querySelectorAll(".navbar ul li a");
 nav_links.forEach((link) => {
@@ -183,7 +186,7 @@ toggle_mode.addEventListener("click", function (s) {
     ? mode_status &&
       (document.body.classList.add("light"),
       document.body.classList.remove("dark"),
-      (toggle_mode.innerHTML = '<i class="fa-regular fa-sun"></i>'),
+      (toggle_mode.innerHTML = '<i class="fa-solid fa-cloud-sun"></i>'),
       (mode_status = !1))
     : (document.body.classList.add("dark"),
       document.body.classList.remove("light"),
@@ -195,10 +198,6 @@ let work_cards = document.querySelectorAll("#work .container .row .col-sm-12");
 
 for (var i = 0; i < work_filtered_list_btns.length; i++) {
   work_filtered_list_btns[i].addEventListener("click", (e) => {
-    Array.from(work_filtered_list_btns).forEach((work_card) => {
-      work_card.classList.remove("active");
-    });
-    e.target.classList.add("active");
     e.preventDefault();
     const filter = e.target.dataset.filter;
     console.log(filter);
@@ -215,6 +214,15 @@ for (var i = 0; i < work_filtered_list_btns.length; i++) {
     });
   });
 }
+
+Array.from(work_filtered_list_btns).forEach((btn) => {
+  btn.onclick = function () {
+    Array.from(work_filtered_list_btns).forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    this.classList.add("active");
+  };
+});
 
 let ghButton = document.querySelector(".see-more");
 ghButton.onclick = function () {
@@ -255,3 +263,17 @@ navbar_links.forEach((link) => {
     }
   });
 });
+
+let to_top_button = document.querySelector(".arrow-top");
+
+to_top_button.addEventListener("click", (e) => {
+  window.scrollTo(0, 0);
+});
+
+window.onscroll = function () {
+  if (window.scrollY >= 1100) {
+    to_top_button.style.right = "10px";
+  } else {
+    to_top_button.style.right = "-77px";
+  }
+};

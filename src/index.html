@@ -59,19 +59,22 @@
               <a class="nav-link" href="#contact">CONTACT</a>
             </li>
             <button class="toggle-mode">
-              <i class="fa-regular fa-sun"></i>
+              <!-- <i class="fa-regular fa-sun"></i> -->
+              <i class="fa-solid fa-cloud-sun"></i>
             </button>
           </ul>
         </div>
       </div>
     </nav>
+
     <div class="landing">
       <div class="container">
         <div class="row">
           <div class="col-sm-6" style="margin: 0 auto">
             <h1 data-aos="zoom-in">
-              <span>HELLO IAM</span> <br />
-              <span>M</span>OHAMED <span>M</span>ONTASER <br />
+              <span class="hello-span">HELLO IAM</span> <br />
+              <span class="m-span">M</span>OHAMED
+              <span class="m-span">M</span>ONTASER <br />
               I WORK AS <span>FULLSTACK</span> DEVELOPER &
               <span>UI / UX</span> DESIGNER
             </h1>
@@ -81,6 +84,8 @@
           </div>
         </div>
       </div>
+      <img class="decor-one-line" src="./imgs/decor1.png" alt="" />
+      <img class="decor-two-line" src="./imgs/decor1.png" alt="" />
     </div>
     <section class="services" id="services">
       <div class="container">
@@ -204,24 +209,18 @@
           </div>
         </div>
       </div>
-      <img
-        data-aos="fade-in"
-        class="decor-one"
-        src="./imgs/decor.png"
-        alt="decor img"
-      />
-      <img
-        data-aos="fade-in"
-        class="decor-two"
-        src="./imgs/decor.png"
-        alt="decor img"
-      />
+      <img class="decor-one-circle" src="./imgs/decor.png" alt="decor img" />
+      <img class="decor-two-circle" src="./imgs/decor.png" alt="decor img" />
     </section>
     <section class="skills" id="skills">
       <h2 class="main-heading" data-aos="fade-in">SKILLS</h2>
       <ul class="filtered-list front-back" data-aos="zoom-in">
-        <li class="active" title="FRONT END" id="front">FRONT</li>
-        <li title="BACK END" id="back" class="back">BACK</li>
+        <li class="active" id="front">
+          <span class="hint--top" aria-label="FRONT END">FRONT</span>
+        </li>
+        <li title="BACK END" id="back" class="back">
+          <span class="hint--top" aria-label="BACK END">BACK</span>
+        </li>
       </ul>
       <div class="container" data-aos="fade-up">
         <div class="row">
@@ -293,14 +292,30 @@
           </div>
         </div>
       </div>
+      <img class="decor-one-line" src="./imgs/decor1.png" alt="" />
+      <img class="decor-two-line" src="./imgs/decor1.png" alt="" />
     </section>
     <section class="work" id="work">
       <h2 class="main-heading" data-aos="fade-in">PORTFOLIO</h2>
       <ul class="filtered-list" id="work-filter" data-aos="zoom-in">
-        <li class="active" data-filter="all">ALL</li>
-        <li data-filter="react">REACT</li>
-        <li data-filter="html">(HTML, CSS, JS)</li>
-        <li data-filter="bootstrap">BOOTSTRAP</li>
+        <li class="active" data-filter="all">
+          <!-- <span class="hint--top" aria-label="All">ALL</span> -->
+          All
+        </li>
+        <li data-filter="react">
+          <!-- <span class="hint--top" aria-label="React">REACT</span> -->
+          REACT
+        </li>
+        <li data-filter="html">
+          <!-- <span class="hint--top" aria-label="HTML - CSS - Js"
+            >(HTML, CSS, JS)</span
+          > -->
+          HTML - CSS - Js
+        </li>
+        <li data-filter="bootstrap">
+          <!-- <span class="hint--top" aria-label="BOOTSTRAP">BOOTSTRAP</span> -->
+          BOOTSTRAP
+        </li>
       </ul>
       <div class="container">
         <div class="row">
@@ -500,18 +515,8 @@
           <img src="./imgs/github.png" alt="see more on github" />
         </button>
       </div>
-      <img
-        data-aos="fade-in"
-        class="decor-one"
-        src="./imgs/decor.png"
-        alt="decor"
-      />
-      <img
-        data-aos="fade-in"
-        class="decor-two"
-        src="./imgs/decor.png"
-        alt="decor"
-      />
+      <img class="decor-one-circle" src="./imgs/decor.png" alt="decor" />
+      <img class="decor-two-circle" src="./imgs/decor.png" alt="decor" />
     </section>
     <section class="contact" id="contact">
       <h2 class="main-heading" data-aos="fade-in">CONTACT ME</h2>
@@ -530,6 +535,7 @@
                       maxlength="25"
                       required
                     />
+                    <span id="name-length">25</span>
                   </div>
                   <div class="col-sm-12">
                     <input
@@ -537,16 +543,20 @@
                       type="email"
                       class="form-control"
                       placeholder="YOUR EMAIL"
+                      maxlength="40"
                       required
                     />
+                    <span id="email-length">40</span>
                   </div>
                   <div class="col-sm-12">
                     <textarea
                       placeholder="YOUR MESSAGE"
                       id="message"
                       class="form-control"
+                      maxlength="300"
                       required
                     ></textarea>
+                    <span id="message-length">300</span>
                   </div>
                   <div class="col-sm-12">
                     <button id="submit">SUBMIT</button>
@@ -574,7 +584,77 @@
         reserved
       </p>
     </footer>
-
+    <div class="loading-layer">
+      <!-- <img src="./imgs/Double Ring.gif" alt="" /> -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="margin: auto; display: block"
+        width="180px"
+        height="180px"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="xMidYMid"
+      >
+        <defs>
+          <path
+            id="path"
+            d="M50 15A15 35 0 0 1 50 85A15 35 0 0 1 50 15"
+            fill="none"
+          ></path>
+          <path
+            id="patha"
+            d="M0 0A15 35 0 0 1 0 70A15 35 0 0 1 0 0"
+            fill="none"
+          ></path>
+        </defs>
+        <g transform="rotate(0 50 50)">
+          <use xlink:href="#path" stroke="#272727" stroke-width="2"></use>
+        </g>
+        <g transform="rotate(60 50 50)">
+          <use xlink:href="#path" stroke="#272727" stroke-width="2"></use>
+        </g>
+        <g transform="rotate(120 50 50)">
+          <use xlink:href="#path" stroke="#272727" stroke-width="2"></use>
+        </g>
+        <g transform="rotate(0 50 50)">
+          <circle cx="50" cy="15" r="9" fill="#e15b64">
+            <animateMotion
+              dur="0.9009009009009008s"
+              repeatCount="indefinite"
+              begin="0s"
+            >
+              <mpath xlink:href="#patha"></mpath>
+            </animateMotion>
+          </circle>
+        </g>
+        <g transform="rotate(60 50 50)">
+          <circle cx="50" cy="15" r="9" fill="#f8b26a">
+            <animateMotion
+              dur="0.9009009009009008s"
+              repeatCount="indefinite"
+              begin="-0.16666666666666666s"
+            >
+              <mpath xlink:href="#patha"></mpath>
+            </animateMotion>
+          </circle>
+        </g>
+        <g transform="rotate(120 50 50)">
+          <circle cx="50" cy="15" r="9" fill="#abbd81">
+            <animateMotion
+              dur="0.9009009009009008s"
+              repeatCount="indefinite"
+              begin="-0.3333333333333333s"
+            >
+              <mpath xlink:href="#patha"></mpath>
+            </animateMotion>
+          </circle>
+        </g>
+      </svg>
+    </div>
+    <button class="arrow-top">
+      <!-- <img src="./imgs/double-arrow.svg" alt="double top" /> -->
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
     <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
   </body>
 </html>
