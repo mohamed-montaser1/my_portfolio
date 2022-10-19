@@ -2,8 +2,7 @@ import "../sass/style.scss";
 import "loaders.css/loaders.min.css";
 import "./validation";
 import "./calc_numbers_valid_inupt";
-import "./remove_inspect";
-import "./loading";
+// import "./remove_inspect";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
 import "jquery/dist/jquery.min";
@@ -277,3 +276,9 @@ window.onscroll = function () {
     to_top_button.style.right = "-77px";
   }
 };
+
+let services_link = document.querySelector("#services-link");
+
+services_link.addEventListener("click", (e) => {
+  window.scrollTo(0, 700);
+});

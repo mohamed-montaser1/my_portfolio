@@ -13,7 +13,7 @@
 
 body {
   font-family: "Raleway", sans-serif !important;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 body,
@@ -47,7 +47,7 @@ body.dark {
       cursor: pointer;
       font-weight: bold;
       font-size: 22px;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.4s ease-in-out;
       &:hover,
       &.active {
         color: $r-color;
@@ -82,7 +82,7 @@ body.light {
       cursor: pointer;
       font-weight: bold;
       font-size: 22px;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.4s ease-in-out;
       color: white;
       &:hover,
       &.active {
@@ -96,7 +96,7 @@ button:hover {
   transform: scale(0.98);
 }
 button {
-  transition: all 0.3s steps(100);
+  transition: all 0.4s ease-in-out;
   border: none !important;
   outline: none !important;
 }
@@ -136,5 +136,13 @@ section {
 .about,
 .skills,
 .work {
-  margin-bottom: 146px !important;
+  margin-bottom: 100px !important;
+}
+
+.about {
+  min-height: 794px;
+}
+
+.skills {
+  min-height: 123vh;
 }
