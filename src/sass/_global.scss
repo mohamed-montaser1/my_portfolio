@@ -139,8 +139,10 @@ section {
   margin-bottom: 100px !important;
 }
 
-.about {
-  min-height: 794px;
+@media (min-width: 786px) {
+  .about {
+    min-height: 794px;
+  }
 }
 
 .skills {
