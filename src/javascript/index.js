@@ -19,6 +19,7 @@ nav_links.forEach((link) => {
   link.onclick = function () {
     nav_links.forEach((link) => {
       link.classList.remove("active");
+      services_link.classList.remove("active");
     }),
       this.classList.add("active");
   };
@@ -281,4 +282,32 @@ let services_link = document.querySelector("#services-link");
 
 services_link.addEventListener("click", (e) => {
   window.scrollTo(0, 700);
+  services_link.classList.add("active");
+  navbar_links.forEach((item) => {
+    item.classList.remove("active");
+  });
 });
+
+let work_card = document.querySelectorAll(".work .card");
+
+setInterval(() => {
+  if (window.innerWidth <= 991) {
+    for (let i = 0; i < work_card.length; i++) {
+      work_card[i].addEventListener("mouseover", (e) => {
+        let lord_icon = document.querySelectorAll(
+          `.work .card .overlay a lord-icon`
+        );
+        lord_icon.forEach((icon) => {
+          icon.setAttribute("trigger", "loop");
+        });
+      });
+    }
+  } else {
+    let lord_icon = document.querySelectorAll(
+      `.work .card .overlay a lord-icon`
+    );
+    lord_icon.forEach((icon) => {
+      icon.setAttribute("trigger", "loop-on-hover");
+    });
+  }
+}, 1);

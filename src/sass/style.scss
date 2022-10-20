@@ -2,7 +2,6 @@
 @import "./global";
 @import "./animation";
 @import "./mode";
-@import "./loading";
 @import "./responsive";
 
 .overview-layer-navbarnav {
@@ -110,6 +109,23 @@
     }
     img {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .decor-one-circle,
+  .decor-one-line,
+  .decor-two-circle,
+  .decor-two-line {
+    display: none;
+  }
+  .filtered-list {
+    li {
+      &,
+      span {
+        font-size: 15px;
+      }
     }
   }
 }
