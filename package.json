@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "file-loader": "^6.2.0",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "loaders.css": "^0.1.2"
   }
 }

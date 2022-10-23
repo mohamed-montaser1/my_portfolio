@@ -139,6 +139,10 @@ body.light {
         font-size: 17px;
         line-height: 1.7;
         color: #010101;
+        a {
+          color: $r-color;
+          font-weight: bold;
+        }
       }
       h4,
       p {
@@ -548,6 +552,10 @@ body.dark {
       p {
         font-size: 17px;
         line-height: 1.7;
+        a {
+          color: $r-color;
+          font-weight: bold;
+        }
       }
       h4,
       p {

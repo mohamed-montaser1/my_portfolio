@@ -5,12 +5,12 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, "./src/index.js"),
+    app: path.resolve(__dirname, "./src/javascript/index.js"),
   },
 
   output: {
     path: path.resolve(__dirname, "./public"),
-    filename: "[name]_bundle.js",
+    filename: "main_bundle.js",
     clean: true,
   },
 
@@ -34,25 +34,13 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
-      // {
-      //   test: /\.(jpe?g|png|gif|svg)$/i,
-      //   type: "asset",
-      //   use: [
-      //     {
-      //       loader: "file-loader",
-      //       options: {
-      //         name: "imgs/[name].[ext]"
-      //       }
-      //     }
-      //   ]
-      // }
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },
