@@ -8,12 +8,24 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $r-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darken($r-color, 10%);
+}
+
+::-webkit-scrollbar-track {
+  background-color: darken(white, 10%);
 }
 
 body {
   font-family: "Raleway", sans-serif !important;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
 }
 
 body,
@@ -47,7 +59,7 @@ body.dark {
       cursor: pointer;
       font-weight: bold;
       font-size: 22px;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease;
       &:hover,
       &.active {
         color: $r-color;
@@ -82,7 +94,7 @@ body.light {
       cursor: pointer;
       font-weight: bold;
       font-size: 22px;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease;
       color: white;
       &:hover,
       &.active {
@@ -93,10 +105,10 @@ body.light {
 }
 
 button:hover {
-  transform: scale(0.98);
+  transform: scale(1.1);
 }
 button {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
   border: none !important;
   outline: none !important;
 }
@@ -145,6 +157,6 @@ section {
   }
 }
 
-.skills {
-  min-height: 123vh;
-}
+// .skills {
+//   min-height: 123vh;
+// }

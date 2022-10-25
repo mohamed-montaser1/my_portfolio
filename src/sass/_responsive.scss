@@ -139,3 +139,45 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .about {
+    .container {
+      .row {
+        .col-sm-12 {
+          text-align: center !important;
+          h3 {
+            text-align: center !important;
+          }
+          button {
+            margin-right: auto;
+            margin-left: auto;
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+    img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .decor-one-circle,
+  .decor-one-line,
+  .decor-two-circle,
+  .decor-two-line {
+    display: none;
+  }
+  .filtered-list {
+    li {
+      &,
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-import "../sass/style.scss";
 import "loaders.css/loaders.min.css";
 import "./validation";
 import "./calc_numbers_valid_inupt";
@@ -9,6 +8,7 @@ import "jquery/dist/jquery.min";
 import "popper.js/dist/popper.min";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min";
+import "../sass/style.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
