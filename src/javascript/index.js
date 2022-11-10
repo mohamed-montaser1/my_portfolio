@@ -174,8 +174,9 @@ lis.forEach(function (s) {
 });
 let skillsSpans = document.querySelectorAll(".skill-bar span");
 let skills_section = document.querySelector(".skills");
+let animation_scroll_y = skills_section.offsetTop;
 setInterval(() => {
-  window.scrollY >= 2139
+  window.scrollY >= animation_scroll_y
     ? skillsSpans.forEach((s) => {
         s.style.width = s.dataset.val;
       })
