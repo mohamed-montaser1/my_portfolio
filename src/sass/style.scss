@@ -197,3 +197,11 @@ footer {
   align-items: center;
   margin: 0 auto;
 }
+
+.about {
+  p {
+    b {
+      color: $r-color;
+    }
+  }
+}

@@ -173,11 +173,15 @@ lis.forEach(function (s) {
   };
 });
 let skillsSpans = document.querySelectorAll(".skill-bar span");
+let skills_section = document.querySelector(".skills");
 setInterval(() => {
-  window.scrollY >= 2700 &&
-    skillsSpans.forEach((s) => {
-      s.style.width = s.dataset.val;
-    });
+  window.scrollY >= 2139
+    ? skillsSpans.forEach((s) => {
+        s.style.width = s.dataset.val;
+      })
+    : skillsSpans.forEach((s) => {
+        s.style.width = 0;
+      });
 }, 1);
 let toggle_mode = document.querySelector(".toggle-mode");
 var mode_status = !1;
