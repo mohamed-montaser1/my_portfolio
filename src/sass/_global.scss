@@ -107,6 +107,11 @@ body.light {
 button:hover {
   transform: scale(1.1);
 }
+
+.no-scale {
+  transform: scale(1) !important;
+}
+
 button {
   transition: all 0.4s ease;
   border: none !important;
@@ -160,3 +165,19 @@ section {
 // .skills {
 //   min-height: 123vh;
 // }
+.hint {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999999999999999;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.583);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  display: none;
+}

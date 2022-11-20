@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="keywords"
-      content="html-template, html css js, webpack, template, portfolio, portfolio web design, web design, clean design, designs for web"
+      content="
+        html css js, webpack, portfolio, portfolio web design, web design
+      "
     />
     <meta
       name="description"
-      content="This Is My Awesome Portfolio Website, if you looking for web developer see this awesome website"
+      content="
+        Hi I'm
+        Mohamed Montaser You can Call me 'Mastro_Coding',
+        This Is My Awesome portfolio Website
+      "
     />
     <meta name="author" content="Mohamed Montaser" />
     <link rel="icon" type="image/x-icon" href="./imgs/logo.svg" />
@@ -50,16 +56,29 @@
               </p>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">ABOUT</a>
+              <a class="nav-link" style="cursor: pointer" id="about-link"
+                >ABOUT</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">SKILLS</a>
+              <a class="nav-link" style="cursor: pointer" id="skills-link"
+                >SKILLS</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#work">WORK</a>
+              <a class="nav-link" style="cursor: pointer" id="work-link"
+                >WORK</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">CONTACT</a>
+              <a class="nav-link" style="cursor: pointer" id="pricing-link"
+                >PRICING</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="cursor: pointer" id="contact-link"
+                >CONTACT</a
+              >
             </li>
             <button class="toggle-mode">
               <!-- <i class="fa-regular fa-sun"></i> -->
@@ -74,7 +93,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6" style="margin: 0 auto">
-            <h1 data-aos="zoom-in">
+            <h1 data-aos="fade-in">
               <span class="hello-span">HELLO IAM</span> <br />
               <span class="m-span">M</span>OHAMED
               <span class="m-span">M</span>ONTASER <br />
@@ -93,7 +112,7 @@
     <section class="services" id="services">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-down">
             <div class="card">
               <div class="icon">
                 <img src="./imgs/web-dev.png" alt="web-dev icon" />
@@ -108,7 +127,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-down">
             <div class="card">
               <div class="icon">
                 <img src="./imgs/ui-ux.png" alt="html icon" />
@@ -121,7 +140,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-down">
             <div class="card">
               <div class="icon">
                 <img src="./imgs/graphic-design.png" alt="html icon" />
@@ -141,7 +160,7 @@
       <h2 class="main-heading" data-aos="fade-in">ABOUT</h2>
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6 text-white" data-aos="fade-up">
+          <div class="col-sm-12 col-md-6 text-white" data-aos="fade-down">
             <h3>WHO’S THIS GUY ?</h3>
             <p>
               HELLO I'M <b>MOHAMED MONTASER</b>, I'M FROM <b>EGYPT</b>, I HAVE
@@ -169,7 +188,7 @@
           <div class="col-sm-12 col-md-6">
             <img
               style="width: 280px !important; height: auto"
-              data-aos="zoom-in"
+              data-aos="fade-down"
               class="about-me"
               src="imgs/young-boy1.png"
               alt="about me"
@@ -182,7 +201,7 @@
     </section>
     <section class="skills" id="skills">
       <h2 class="main-heading" data-aos="fade-in">SKILLS</h2>
-      <ul class="filtered-list front-back" data-aos="zoom-in">
+      <ul class="filtered-list front-back" data-aos="fade-down">
         <li class="active" id="front">
           <span class="hint--top" aria-label="FRONT END">FRONT</span>
         </li>
@@ -190,7 +209,7 @@
           <span class="hint--top" aria-label="BACK END">BACK</span>
         </li>
       </ul>
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-down">
         <div class="row">
           <div class="col-sm-12 col-md-6">
             <div class="skill">
@@ -264,8 +283,8 @@
       <!-- <img class="decor-two-line" src="./imgs/decor1.png" alt="" /> -->
     </section>
     <section class="work" id="work">
-      <h2 class="main-heading" data-aos="fade-in">PORTFOLIO</h2>
-      <ul class="filtered-list" id="work-filter" data-aos="zoom-in">
+      <h2 class="main-heading" data-aos="fade-in">WORK</h2>
+      <ul class="filtered-list" id="work-filter" data-aos="fade-down">
         <li class="active" data-filter="all">
           <!-- <span class="hint--top" aria-label="All">ALL</span> -->
           All
@@ -285,7 +304,7 @@
           BOOTSTRAP
         </li>
       </ul>
-      <div class="container">
+      <div class="container" data-aos="fade-down">
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-4 react">
             <div class="card">
@@ -486,6 +505,73 @@
       <img class="decor-one-circle" src="./imgs/decor.png" alt="decor" />
       <img class="decor-two-circle" src="./imgs/decor.png" alt="decor" />
     </section>
+    <section class="pricing" id="pricing">
+      <h2 class="main-heading" data-aos="fade-in">PRICING</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card plan plan-one">
+              <div class="card-body">
+                <h5>Basic</h5>
+                <h3>5$</h3>
+                <ul>
+                  <li>3 sections</li>
+                  <li>responsive design</li>
+                  <li class="no">bootstrap</li>
+                  <li class="no">webpack configration</li>
+                  <li class="no">domain</li>
+                  <li class="no">animation</li>
+                  <li>1 more edit after complate</li>
+                </ul>
+              </div>
+              <div class="plan-footer">
+                <button class="no-scale">Subscripe Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card plan plan-two">
+              <div class="card-body">
+                <h5>Pro</h5>
+                <h3>10$</h3>
+                <ul>
+                  <li>5 sections</li>
+                  <li>responsive design</li>
+                  <li>bootstrap</li>
+                  <li>webpack configration</li>
+                  <li>domain</li>
+                  <li class="no">animation</li>
+                  <li>3 more edit after complate</li>
+                </ul>
+              </div>
+              <div class="plan-footer">
+                <button class="no-scale">Subscripe Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card plan plan-three">
+              <div class="card-body">
+                <h5>Premium</h5>
+                <h3>15$</h3>
+                <ul>
+                  <li>6 sections</li>
+                  <li>responsive design</li>
+                  <li>bootstrap</li>
+                  <li>webpack configration</li>
+                  <li>domain</li>
+                  <li>animation</li>
+                  <li>5 more edit after complate</li>
+                </ul>
+              </div>
+              <div class="plan-footer">
+                <button class="no-scale">Subscripe Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="contact" id="contact">
       <h2 class="main-heading" data-aos="fade-in">CONTACT ME</h2>
       <div class="container">
@@ -499,7 +585,7 @@
                       type="text"
                       class="form-control"
                       id="name"
-                      placeholder="YOUR NAME"
+                      placeholder="NAME"
                       maxlength="25"
                       required
                     />
@@ -510,7 +596,7 @@
                       id="email-input"
                       type="email"
                       class="form-control"
-                      placeholder="YOUR EMAIL"
+                      placeholder="EMAIL"
                       maxlength="40"
                       required
                     />
@@ -518,7 +604,7 @@
                   </div>
                   <div class="col-sm-12">
                     <textarea
-                      placeholder="YOUR MESSAGE"
+                      placeholder="MESSAGE"
                       id="message"
                       class="form-control"
                       maxlength="300"
@@ -579,6 +665,7 @@
     <button class="arrow-top">
       <i class="fa-solid fa-angles-up"></i>
     </button>
+    <div class="hint">press d key to toggle mood</div>
     <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
   </body>
 </html>

@@ -205,3 +205,109 @@ footer {
     }
   }
 }
+
+.pricing {
+  margin-bottom: 100px;
+  .container {
+    margin-top: 90px;
+    .plan {
+      min-height: 531px;
+      border: none;
+      box-shadow: 0 0 8px 1px #d5d5d5;
+      .card-body {
+        padding: 24px 18px 20px 29px;
+        h3 {
+          font-size: 43px;
+          font-weight: bold;
+          margin: 20px 0 54px 0;
+        }
+        ul {
+          padding-left: 0;
+          li {
+            margin: 0;
+            list-style: none;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 40px;
+            padding: 10px 10px 17px 64px;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: capitalize;
+            background-image: url("../imgs/check.png");
+            &.no {
+              background-image: url("../imgs/multiply.png");
+            }
+          }
+          // background-repeat: no-repeat;
+          // background-position: left center;
+          // background-size: 40px;
+        }
+      }
+      .plan-footer {
+        // position: absolute;
+        // bottom: 0px;
+        width: 100%;
+        display: flex;
+        padding-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        button {
+          background: transparent;
+          padding: 12px 23px;
+          font-size: 18px;
+          border-radius: 15px;
+          font-weight: 500;
+          // border: 1px solid $r-color !important;
+          &:hover {
+            background-color: $r-color;
+            color: white;
+          }
+        }
+      }
+      &.plan-two {
+        background: $t-color;
+        height: 740px !important;
+        .card-body {
+          color: white !important;
+        }
+        .plan-footer {
+          button {
+            background-color: $r-color;
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.light {
+  .plan {
+    background-color: white;
+    .card-body {
+      color: black;
+    }
+  }
+}
+body.dark {
+  .plan {
+    background-color: #010101;
+    .card-body {
+      color: white;
+    }
+    .plan-footer {
+      button {
+        background-color: $r-color;
+        color: white !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing {
+    .plan {
+      margin-bottom: 50px;
+    }
+  }
+}

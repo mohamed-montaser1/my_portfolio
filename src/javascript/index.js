@@ -1,7 +1,6 @@
 import "loaders.css/loaders.min.css";
 import "./validation";
 import "./calc_numbers_valid_inupt";
-// import "./remove_inspect";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
 import "jquery/dist/jquery.min";
@@ -173,16 +172,13 @@ lis.forEach(function (s) {
   };
 });
 let skillsSpans = document.querySelectorAll(".skill-bar span");
-let skills_section = document.querySelector(".skills");
-let animation_scroll_y = skills_section.offsetTop;
+let skills_section_top = document.querySelector(".skills").offsetTop;
+
 setInterval(() => {
-  window.scrollY >= animation_scroll_y
-    ? skillsSpans.forEach((s) => {
-        s.style.width = s.dataset.val;
-      })
-    : skillsSpans.forEach((s) => {
-        s.style.width = 0;
-      });
+  window.scrollY >= skills_section_top - 300 &&
+    skillsSpans.forEach((s) => {
+      s.style.width = s.dataset.val;
+    });
 }, 1);
 let toggle_mode = document.querySelector(".toggle-mode");
 var mode_status = !1;
@@ -284,6 +280,11 @@ window.onscroll = function () {
 };
 
 let services_link = document.querySelector("#services-link");
+let about_link = document.querySelector("#about-link");
+let skills_link = document.querySelector("#skills-link");
+let work_link = document.querySelector("#work-link");
+let contact_link = document.querySelector("#pricing-link");
+let pricing_link = document.querySelector("#contact-link");
 
 services_link.addEventListener("click", (e) => {
   window.scrollTo(0, 700);
@@ -291,6 +292,26 @@ services_link.addEventListener("click", (e) => {
   navbar_links.forEach((item) => {
     item.classList.remove("active");
   });
+});
+
+about_link.addEventListener("click", (e) => {
+  window.scrollTo(0, 1198);
+});
+
+skills_link.addEventListener("click", (e) => {
+  window.scrollTo(0, 2093);
+});
+
+work_link.addEventListener("click", (e) => {
+  window.scrollTo(0, 2886);
+});
+
+pricing_link.addEventListener("click", (e) => {
+  window.scrollTo(0, 4388);
+});
+
+contact_link.addEventListener("click", (e) => {
+  window.scrollTo(0, 4388);
 });
 
 let work_card = document.querySelectorAll(".work .card");
@@ -316,3 +337,21 @@ setInterval(() => {
     });
   }
 }, 1);
+
+// dark mode on press 'd' letter
+
+window.addEventListener("keyup", (e) => {
+  if (e.key == "d") {
+    document.querySelector(".toggle-mode").click();
+  }
+});
+let mood_status = false;
+document.querySelector(".toggle-mode").onclick = function () {
+  if (!mood_status) {
+    document.querySelector(".hint").style.display = "flex";
+    setTimeout(() => {
+      document.querySelector(".hint").style.display = "none";
+    }, 1500);
+    mood_status = true;
+  }
+};
