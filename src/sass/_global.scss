@@ -1,6 +1,10 @@
 @import "./variables";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
 
+:root {
+  --scroll-bar: 15px;
+}
+
 *,
 *::before,
 *::after {
@@ -8,7 +12,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: var(--scroll-bar);
 }
 
 ::-webkit-scrollbar-thumb {

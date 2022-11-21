@@ -359,3 +359,20 @@ document.querySelector(".toggle-mode").onclick = function () {
     mood_status = true;
   }
 };
+
+// online and offline
+
+var r = document.querySelector(":root");
+function myFunction_set(input_value, el) {
+  r.style.setProperty(`${el}`, `${input_value}`);
+}
+
+window.onload = function () {
+  if (!window.navigator.onLine) {
+    // offline
+    document.querySelector(".offline-text").style.display = "flex";
+
+    // Get the root element
+    myFunction_set("0", "--scroll-bar");
+  }
+};
