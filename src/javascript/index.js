@@ -340,11 +340,15 @@ setInterval(() => {
 
 // dark mode on press 'd' letter
 
-window.addEventListener("keyup", (e) => {
-  if (e.key == "d") {
-    document.querySelector(".toggle-mode").click();
+document.body.addEventListener("keyup", (e) => {
+  const elem = document.activeElement;
+  if (!elem.dataset.custom) {
+    if (e.key == "d") {
+      document.querySelector(".toggle-mode").click();
+    }
   }
 });
+
 let mood_status = false;
 document.querySelector(".toggle-mode").onclick = function () {
   if (!mood_status) {
