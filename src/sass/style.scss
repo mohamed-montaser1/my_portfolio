@@ -211,6 +211,16 @@ footer {
   .container {
     margin-top: 90px;
     .plan {
+      .best-value {
+        position: absolute;
+        color: white;
+        font-weight: 600;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $secondary-color;
+        padding: 10px 20px;
+        border-radius: 6px;
+      }
       min-height: 531px;
       border: none;
       box-shadow: 0 0 8px 1px #d5d5d5;
@@ -233,7 +243,7 @@ footer {
             font-size: 20px;
             font-weight: 600;
             text-transform: capitalize;
-            background-image: url("../imgs/check.png");
+            background-image: url("../imgs/check.webp");
             &.no {
               background-image: url("../imgs/multiply.png");
             }
