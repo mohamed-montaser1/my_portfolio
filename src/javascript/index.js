@@ -351,12 +351,14 @@ document.body.addEventListener("keyup", (e) => {
 
 let mood_status = false;
 document.querySelector(".toggle-mode").onclick = function () {
-  if (!mood_status) {
-    document.querySelector(".hint").style.display = "flex";
-    setTimeout(() => {
-      document.querySelector(".hint").style.display = "none";
-    }, 1500);
-    mood_status = true;
+  if (window.innerWidth > 991) {
+    if (!mood_status) {
+      document.querySelector(".hint").style.display = "flex";
+      setTimeout(() => {
+        document.querySelector(".hint").style.display = "none";
+      }, 1500);
+      mood_status = true;
+    }
   }
 };
 
