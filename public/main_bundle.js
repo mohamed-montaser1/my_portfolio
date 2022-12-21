@@ -7282,76 +7282,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.6.
 });
 
 
-/***/ }),
-
-/***/ 877:
-/***/ (() => {
-
-let name_input = document.querySelector("#name");
-let email_input = document.querySelector("#email-input");
-let textarea = document.querySelector("form textarea");
-let name_length = document.querySelector("#name-length");
-let email_length = document.querySelector("#email-length");
-let message_length = document.querySelector("#message-length");
-email_input.addEventListener("input", (e) => {
-  email_length.innerHTML = 40 - email_input.value.length;
-});
-name_input.addEventListener("input", (e) => {
-  name_length.innerHTML = 25 - name_input.value.length;
-});
-textarea.addEventListener("input", (e) => {
-  message_length.innerHTML = 300 - textarea.value.length;
-});
-
-
-/***/ }),
-
-/***/ 898:
-/***/ (() => {
-
-let email_input = document.querySelector("#email-input");
-let submit = document.querySelector("#submit");
-let name_input = document.querySelector("#name");
-let textarea = document.querySelector("form textarea");
-let all_inputs = document.querySelectorAll(".contact input");
-submit.addEventListener("click", (e) => {
-  e.preventDefault();
-  check_value_not_equal_to_empty_string();
-  check_email_is_valid(email_input);
-  check_the_message_dont_have_any_bad_words(textarea);
-});
-function check_value_not_equal_to_empty_string() {
-  for (let i = 0; i < all_inputs.length; i++) {
-    if (all_inputs[i].value == "") {
-      alert(`you must fill the ${all_inputs[i].id} input`);
-    }
-  }
-  if (textarea.value == "") {
-    alert(`you must fill the message input`);
-  }
-}
-function check_email_is_valid(input) {
-  input = Array.from(input.value);
-  if (input.length > 0) {
-    if (!input.includes("@")) {
-      alert(`you must add "@" in your email`);
-    }
-  }
-}
-function check_the_message_dont_have_any_bad_words(textarea2) {
-  textarea2 = textarea2.value.split(" ");
-  let bad_words = "fuck motherfucker sonofbitch bitch shit".split(" ");
-  for (let i = 0; i < textarea2.length; i++) {
-    bad_words.forEach((bad_word) => {
-      if (textarea2[i] == bad_word) {
-        alert(`Why You Say Bad Words To Me \u{1F61F}`[i]);
-        return;
-      }
-    });
-  }
-}
-
-
 /***/ })
 
 /******/ 	});
@@ -7438,18 +7368,14 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/* harmony import */ var _validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(898);
-/* harmony import */ var _validation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_validation__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _calc_numbers_valid_inupt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(877);
-/* harmony import */ var _calc_numbers_valid_inupt__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_calc_numbers_valid_inupt__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(708);
-/* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(589);
-/* harmony import */ var jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_all_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(177);
-/* harmony import */ var _fortawesome_fontawesome_free_js_all_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all_min__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(853);
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(708);
+/* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(589);
+/* harmony import */ var jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_all_min__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(177);
+/* harmony import */ var _fortawesome_fontawesome_free_js_all_min__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all_min__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(853);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -7460,9 +7386,7 @@ var __webpack_exports__ = {};
 
 
 
-
-
-aos__WEBPACK_IMPORTED_MODULE_5___default().init({ easing: "linear", duration: 500 });
+aos__WEBPACK_IMPORTED_MODULE_3___default().init({ easing: "ease-in-out", duration: 600 });
 let nav_links = document.querySelectorAll(".navbar ul li a");
 nav_links.forEach((link) => {
   link.onclick = function() {
@@ -7692,34 +7616,6 @@ window.onscroll = function() {
     to_top_button.style.right = "-77px";
   }
 };
-let services_link = document.querySelector("#services-link");
-let about_link = document.querySelector("#about-link");
-let skills_link = document.querySelector("#skills-link");
-let work_link = document.querySelector("#work-link");
-let contact_link = document.querySelector("#pricing-link");
-let pricing_link = document.querySelector("#contact-link");
-services_link.addEventListener("click", () => {
-  window.scrollTo(0, 700);
-  services_link.classList.add("active");
-  navbar_links.forEach((item) => {
-    item.classList.remove("active");
-  });
-});
-about_link.addEventListener("click", () => {
-  window.scrollTo(0, 1198);
-});
-skills_link.addEventListener("click", () => {
-  window.scrollTo(0, 2093);
-});
-work_link.addEventListener("click", () => {
-  window.scrollTo(0, 2886);
-});
-pricing_link.addEventListener("click", () => {
-  window.scrollTo(0, 4388);
-});
-contact_link.addEventListener("click", () => {
-  window.scrollTo(0, 4388);
-});
 let work_card = document.querySelectorAll(".work .card");
 setInterval(() => {
   if (window.innerWidth <= 991) {
@@ -7762,16 +7658,11 @@ document.querySelector(".toggle-mode").onclick = function() {
     }
   }
 };
-const r = document.querySelector(":root");
-function myFunction_set(input_value, el) {
-  r.style.setProperty(`${el}`, `${input_value}`);
-}
-window.onload = function() {
-  if (!window.navigator.onLine) {
-    document.querySelector(".offline-text").style.display = "flex";
-    myFunction_set("0", "--scroll-bar");
-  }
-};
+let phoneNumber = document.querySelector(".phoneNumber");
+phoneNumber.addEventListener("click", () => {
+  window.navigator.clipboard.writeText("+20 1009641196");
+  alert("copied the phone number!");
+});
 
 })();
 

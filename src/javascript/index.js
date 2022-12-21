@@ -1,6 +1,4 @@
 import "loaders.css/loaders.min.css";
-import "./validation";
-import "./calc_numbers_valid_inupt";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
 import "jquery/dist/jquery.min";
@@ -11,7 +9,7 @@ import "../sass/style.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({ easing: "linear", duration: 500 });
+AOS.init({ easing: "ease-in-out", duration: 600 });
 
 let nav_links = document.querySelectorAll(".navbar ul li a");
 nav_links.forEach((link) => {
@@ -279,42 +277,6 @@ window.onscroll = function () {
   }
 };
 
-let services_link = document.querySelector("#services-link");
-let about_link = document.querySelector("#about-link");
-let skills_link = document.querySelector("#skills-link");
-let work_link = document.querySelector("#work-link");
-let contact_link = document.querySelector("#pricing-link");
-let pricing_link = document.querySelector("#contact-link");
-
-services_link.addEventListener("click", () => {
-
-  window.scrollTo(0, 700);
-  services_link.classList.add("active");
-  navbar_links.forEach((item) => {
-    item.classList.remove("active");
-  });
-});
-
-about_link.addEventListener("click", () => {
-  window.scrollTo(0, 1198);
-});
-
-skills_link.addEventListener("click", () => {
-  window.scrollTo(0, 2093);
-});
-
-work_link.addEventListener("click", ()  => {
-  window.scrollTo(0, 2886);
-});
-
-pricing_link.addEventListener("click", () => {
-  window.scrollTo(0, 4388);
-});
-
-contact_link.addEventListener("click", () => {
-  window.scrollTo(0, 4388)
-});
-
 let work_card = document.querySelectorAll(".work .card");
 
 setInterval(() => {
@@ -363,19 +325,9 @@ document.querySelector(".toggle-mode").onclick = function () {
   }
 };
 
-// online and offline
+let phoneNumber = document.querySelector(".phoneNumber");
 
-const r = document.querySelector(":root");
-function myFunction_set(input_value, el) {
-  r.style.setProperty(`${el}`, `${input_value}`);
-}
-
-window.onload = function () {
-  if (!window.navigator.onLine) {
-    // offline
-    document.querySelector(".offline-text").style.display = "flex";
-
-    // Get the root element
-    myFunction_set("0", "--scroll-bar");
-  }
-};
+phoneNumber.addEventListener('click', () => {
+    window.navigator.clipboard.writeText("+20 1009641196")
+  alert('copied the phone number!')
+})
