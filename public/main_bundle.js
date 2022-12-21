@@ -7772,17 +7772,6 @@ window.onload = function() {
     myFunction_set("0", "--scroll-bar");
   }
 };
-let pricingSwitcher = document.querySelector(".switcher");
-let pricingSwitcherState = false;
-pricingSwitcher.addEventListener("click", (e) => {
-  if (!pricingSwitcherState) {
-    pricingSwitcher.style.justifyContent = "flex-start";
-    pricingSwitcherState = true;
-  } else if (pricingSwitcherState) {
-    pricingSwitcher.style.justifyContent = "flex-end";
-    pricingSwitcherState = false;
-  }
-});
 
 })();
 
