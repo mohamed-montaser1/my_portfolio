@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="00264c71-5469-49c4-a26a-70131703bf72" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/public/00977f6049a3677d8ae6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/400215221348a97cf542.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/e83b4bdf529304ded1e8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main_bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main_bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main_bundle.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/about-me.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imgs/about-me.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/javascript/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/_mode.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/_mode.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/style.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2JAw7rvNr4fNMdk8lTclt0hyc5g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00264c71-5469-49c4-a26a-70131703bf72" name="Changes" comment="" />
+      <created>1671534033030</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671534033030</updated>
+    </task>
+    <servers />
+  </component>
+</project>

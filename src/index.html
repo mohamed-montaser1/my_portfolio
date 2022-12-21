@@ -80,7 +80,7 @@
                 >CONTACT</a
               >
             </li>
-            <button class="toggle-mode">
+            <button class="toggle-mode" aria-label="toggle-mode">
               <!-- <i class="fa-regular fa-sun"></i> -->
               <i class="fa-solid fa-cloud-sun"></i>
             </button>
@@ -101,13 +101,14 @@
               <span>UI / UX</span> DESIGNER
             </h1>
             <div class="img-container">
-              <img data-aos="fade-in" src="./imgs/me1.png" alt="me 3d img" />
+              <!-- <img data-aos="fade-in" src="./imgs/me1.png" alt="me 3d img" /> -->
+              <img data-aos="fade-in" src="./imgs/dev-ed-wave.png" alt="me 3d img" />
             </div>
           </div>
         </div>
       </div>
-      <img class="decor-one-line" src="./imgs/decor1.webp" alt="" />
-      <img class="decor-two-line" src="./imgs/decor1.webp" alt="" />
+      <img class="decor-one-line" src="./imgs/decor1.webp" alt="decor" />
+      <img class="decor-two-line" src="./imgs/decor1.webp" alt="decor" />
     </div>
     <section class="services" id="services">
       <div class="container">
@@ -181,7 +182,7 @@
                 >SOLO LEARN</a
               >
             </p>
-            <button onclick="window.location.href = '#contact'">
+            <button onclick="window.location.href = '#contact'" aria-label="hiring me">
               HIRE ME! <img src="./imgs/fire.png" alt="fire" />
             </button>
           </div>
@@ -190,7 +191,7 @@
               style="width: 280px !important; height: auto"
               data-aos="fade-down"
               class="about-me"
-              src="imgs/young-boy1.webp"
+              src="imgs/about-me.png"
               alt="about me"
             />
           </div>
@@ -279,7 +280,7 @@
           </div>
         </div>
       </div>
-      <img class="decor-one-line" src="./imgs/decor1.webp" alt="" />
+      <img class="decor-one-line" src="./imgs/decor1.webp" alt="decor" />
       <!-- <img class="decor-two-line" src="./imgs/decor1.webp" alt="" /> -->
     </section>
     <section class="work" id="work">
@@ -589,7 +590,7 @@
             </div>
           </div>
         </div>
-        <button class="see-more">
+        <button class="see-more" aria-label="see-more">
           SEE MORE ON GITHUB
           <img src="./imgs/github.png" alt="see more on github" />
         </button>
@@ -597,7 +598,7 @@
       <img class="decor-one-circle" src="./imgs/decor.webp" alt="decor" />
       <img class="decor-two-circle" src="./imgs/decor.webp" alt="decor" />
     </section>
-    <section class="pricing" id="pricing">
+    <!-- <section class="pricing" id="pricing">
       <h2 class="main-heading" data-aos="fade-in">PRICING</h2>
       <div class="container">
         <div class="row">
@@ -664,7 +665,106 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <!-- Start Pricing Section -->
+    <div id="pricing">
+      <div class="containerd">
+        <h1>Our Pricing</h1>
+        <div class="pricing-cards__container">
+          <div class="pricing-cards__container__card">
+            <div class="header">
+              <h3 class="pricing-cards__container__card-title">Basic</h3>
+              <h2 class="pricing-cards__container__card-price">
+                <span>$</span> 15
+              </h2>
+            </div>
+            <ul class="pricing-cards__container__card-list">
+              <li class="pricing-cards__container__card-list-item">
+                3 Sections
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                HTML, CSS, JS, Bootstrap
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Webpack Configration
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Responsive Web Design
+              </li>
+            </ul>
+            <button class="pricing-cards__container__card-button" aria-label="learn more about this pricing">
+              LEARN MORE
+            </button>
+          </div>
+          <div class="pricing-cards__container__card">
+            <div class="header">
+              <h3 class="pricing-cards__container__card-title">Master</h3>
+              <h2 class="pricing-cards__container__card-price">
+                <span>$</span> 33
+              </h2>
+            </div>
+            <ul class="pricing-cards__container__card-list">
+              <li class="pricing-cards__container__card-list-item">
+                7 Sections
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                React, Css, Bootstrap
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Webpack Configration
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Animation
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Custom Domain
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Responsive Web Design
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                4 More Edits
+              </li>
+            </ul>
+            <button class="pricing-cards__container__card-button" aria-label="learn more about this pricing">
+              LEARN MORE
+            </button>
+          </div>
+          <div class="pricing-cards__container__card">
+            <div class="header">
+              <h3 class="pricing-cards__container__card-title">Professional</h3>
+              <h2 class="pricing-cards__container__card-price">
+                <span>$</span> 24
+              </h2>
+            </div>
+            <ul class="pricing-cards__container__card-list">
+              <li class="pricing-cards__container__card-list-item">
+                5 SECTIONS
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Html, Css, Js, Bootstrap
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Webpack Configration
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Animation
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Custom Domain
+              </li>
+              <li class="pricing-cards__container__card-list-item">
+                Responsive Web Design
+              </li>
+            </ul>
+            <button class="pricing-cards__container__card-button" aria-label="learn more about this pricing">
+              LEARN MORE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Pricing Section -->
     <section class="contact" id="contact">
       <h2 class="main-heading" data-aos="fade-in">CONTACT ME</h2>
       <div class="container">
@@ -709,7 +809,7 @@
                     <span id="message-length">300</span>
                   </div>
                   <div class="col-sm-12">
-                    <button id="submit">SUBMIT</button>
+                    <button id="submit" aria-label="submit the message">SUBMIT</button>
                   </div>
                 </div>
               </div>
@@ -758,7 +858,7 @@
         </div>
       </div>
     </footer>
-    <button class="arrow-top">
+    <button class="arrow-top" aria-label="go to top">
       <i class="fa-solid fa-angles-up"></i>
     </button>
     <div class="hint">press d key to toggle mood</div>
