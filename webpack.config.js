@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpack = require("webpack");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -27,6 +28,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        loader: 'esbuild-loader',
+        options: {
+            loader: 'js',
+            target: 'es2015'
+        }
+      },
+      {
         test: /\.html$/,
         loader: "html-loader",
       },
@@ -44,6 +53,11 @@ module.exports = {
       },
     ],
   },
+optimization: {
+  minimizer: [
+      new CssMinimizerPlugin(),
+  ],
+},
 
   plugins: [
     new HtmlWebpackPlugin({
