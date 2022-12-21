@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "build-add": "npm run build && git add ."
   },
   "keywords": [],
   "author": "",
