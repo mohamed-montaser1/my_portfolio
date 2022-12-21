@@ -18,7 +18,7 @@ nav_links.forEach((link) => {
   link.onclick = function () {
     nav_links.forEach((link) => {
       link.classList.remove("active");
-      services_link.classList.remove("active");
+      link.classList.remove("active");
     }),
       this.classList.add("active");
   };
@@ -286,7 +286,8 @@ let work_link = document.querySelector("#work-link");
 let contact_link = document.querySelector("#pricing-link");
 let pricing_link = document.querySelector("#contact-link");
 
-services_link.addEventListener("click", (e) => {
+services_link.addEventListener("click", () => {
+
   window.scrollTo(0, 700);
   services_link.classList.add("active");
   navbar_links.forEach((item) => {
@@ -294,24 +295,24 @@ services_link.addEventListener("click", (e) => {
   });
 });
 
-about_link.addEventListener("click", (e) => {
+about_link.addEventListener("click", () => {
   window.scrollTo(0, 1198);
 });
 
-skills_link.addEventListener("click", (e) => {
+skills_link.addEventListener("click", () => {
   window.scrollTo(0, 2093);
 });
 
-work_link.addEventListener("click", (e) => {
+work_link.addEventListener("click", ()  => {
   window.scrollTo(0, 2886);
 });
 
-pricing_link.addEventListener("click", (e) => {
+pricing_link.addEventListener("click", () => {
   window.scrollTo(0, 4388);
 });
 
-contact_link.addEventListener("click", (e) => {
-  window.scrollTo(0, 4388);
+contact_link.addEventListener("click", () => {
+  window.scrollTo(0, 4388)
 });
 
 let work_card = document.querySelectorAll(".work .card");
@@ -364,7 +365,7 @@ document.querySelector(".toggle-mode").onclick = function () {
 
 // online and offline
 
-var r = document.querySelector(":root");
+const r = document.querySelector(":root");
 function myFunction_set(input_value, el) {
   r.style.setProperty(`${el}`, `${input_value}`);
 }
