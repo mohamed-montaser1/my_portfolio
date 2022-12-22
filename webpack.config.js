@@ -3,36 +3,40 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpack = require("webpack");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-
+const TerserPlugin = require('terser-webpack-plugin')
 module.exports = {
   entry: {
     app: path.resolve(__dirname, "./src/javascript/index.js"),
   },
 
   output: {
-    path: path.resolve(__dirname, "./public"),
+    path: path.resolve(__dirname, "build"),
     filename: "main_bundle.js",
     clean: true,
+    assetModuleFilename: 'imgs/[name][ext]'
   },
 
   devServer: {
-    static: "./public",
+      static: "./build",
     hot: true,
     open: true,
     port: 2000,
+    compress: true,
     devMiddleware: {
-      writeToDisk: true,
-    },
+          writeToDisk: true
+      }
   },
 
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'esbuild-loader',
-        options: {
-            loader: 'js',
-            target: 'es2015'
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ["@babel/preset-env"]
+            }
         }
       },
       {
@@ -56,6 +60,7 @@ module.exports = {
 optimization: {
   minimizer: [
       new CssMinimizerPlugin(),
+      new TerserPlugin()
   ],
 },
 
@@ -63,6 +68,11 @@ optimization: {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true
+      }
     }),
     new webpack.ProvidePlugin({
       $: "jquery",

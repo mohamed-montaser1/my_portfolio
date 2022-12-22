@@ -32,7 +32,7 @@ lis.forEach(function (s) {
     let s = document.querySelector(".skills .container");
     "FRONT" === this.innerText
       ? (s.innerHTML = `
-      <div class="row">
+        <div class="row">
       <div class="col-sm-12 col-md-6">
         <div class="skill">
           <div class="skills-header">
@@ -59,10 +59,10 @@ lis.forEach(function (s) {
         <div class="skill">
           <div class="skills-header">
             <h4>JAVASCRIPT & <span>R</span>EACT</h4>
-            <p>90%</p>
+            <p>96%</p>
           </div>
           <div class="skill-bar">
-            <span data-val="90%"></span>
+            <span data-val="96%"></span>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@ lis.forEach(function (s) {
       <div class="col-sm-12 col-md-6">
         <div class="skill">
           <div class="skills-header">
-            <h4>NPM & <span>W</span>EBPACK</h4>
+            <h4>NPM & <span>Y</span>ARN</h4>
             <p>97%</p>
           </div>
           <div class="skill-bar">
@@ -99,6 +99,39 @@ lis.forEach(function (s) {
           </div>
         </div>
       </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="skill">
+          <div class="skills-header">
+            <h4>WEBPACK</h4>
+            <p>100%</p>
+          </div>
+          <div class="skill-bar">
+            <span data-val="100%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="skill">
+          <div class="skills-header">
+            <h4>API</h4>
+            <p>100%</p>
+          </div>
+          <div class="skill-bar">
+            <span data-val="100%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="skill">
+          <div class="skills-header">
+            <h4>HOSTING -- WORKING ON IT</h4>
+            <p>50%</p>
+          </div>
+          <div class="skill-bar">
+            <span data-val="50%"></span>
+          </div>
+        </div>
+      </div>
     </div>
       `)
       : "BACK" === this.innerText &&
@@ -108,10 +141,10 @@ lis.forEach(function (s) {
         <div class="skill">
           <div class="skills-header">
             <h4>NODE <span>J</span>S</h4>
-            <p>88%</p>
+            <p>95%</p>
           </div>
           <div class="skill-bar">
-            <span data-val="88%"></span>
+            <span data-val="95%"></span>
           </div>
         </div>
       </div>
@@ -130,10 +163,10 @@ lis.forEach(function (s) {
         <div class="skill">
           <div class="skills-header">
             <h4>MONGODB</h4>
-            <p>90%</p>
+            <p>97%</p>
           </div>
           <div class="skill-bar">
-            <span data-val="90%"></span>
+            <span data-val="97%"></span>
           </div>
         </div>
       </div>
@@ -151,7 +184,7 @@ lis.forEach(function (s) {
       <div class="col-sm-12 col-md-6">
         <div class="skill">
           <div class="skills-header">
-            <h4>NPM</h4>
+            <h4>NPM & <span>Y</span>ARN</h4>
             <p>98%</p>
           </div>
           <div class="skill-bar">
@@ -319,7 +352,7 @@ document.querySelector(".toggle-mode").onclick = function () {
       document.querySelector(".hint").style.display = "flex";
       setTimeout(() => {
         document.querySelector(".hint").style.display = "none";
-      }, 1500);
+      }, 1000);
       mood_status = true;
     }
   }
