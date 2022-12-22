@@ -17,14 +17,14 @@ module.exports = {
   },
 
   devServer: {
-      static: "./build",
+    static: "./build",
     hot: true,
     open: true,
     port: 2000,
     compress: true,
     devMiddleware: {
-          writeToDisk: true
-      }
+        writeToDisk: true
+    }
   },
 
   module: {
