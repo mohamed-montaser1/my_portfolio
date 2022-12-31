@@ -1,21 +1,16 @@
-import "loaders.css/loaders.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fortawesome/fontawesome-free/js/all.min";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
 import "jquery/dist/jquery.min";
+import "loaders.css/loaders.min.css";
 import "popper.js/dist/popper.min";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@fortawesome/fontawesome-free/js/all.min";
 import "../sass/style.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init({ easing: "ease-in-out", duration: 600 });
 
 let nav_links = document.querySelectorAll(".navbar ul li a");
 nav_links.forEach((link) => {
   link.onclick = function () {
     nav_links.forEach((link) => {
-      link.classList.remove("active");
       link.classList.remove("active");
     }),
       this.classList.add("active");
@@ -32,7 +27,7 @@ lis.forEach(function (s) {
     let s = document.querySelector(".skills .container");
     "FRONT" === this.innerText
       ? (s.innerHTML = `
-        <div class="row">
+      <div class="row">
       <div class="col-sm-12 col-md-6">
         <div class="skill">
           <div class="skills-header">
@@ -124,11 +119,11 @@ lis.forEach(function (s) {
       <div class="col-sm-12 col-md-6">
         <div class="skill">
           <div class="skills-header">
-            <h4>HOSTING -- WORKING ON IT</h4>
-            <p>50%</p>
+            <h4>HOSTING</h4>
+            <p>90%</p>
           </div>
           <div class="skill-bar">
-            <span data-val="50%"></span>
+            <span data-val="90%"></span>
           </div>
         </div>
       </div>
@@ -352,7 +347,7 @@ document.querySelector(".toggle-mode").onclick = function () {
       document.querySelector(".hint").style.display = "flex";
       setTimeout(() => {
         document.querySelector(".hint").style.display = "none";
-      }, 1000);
+      }, 700);
       mood_status = true;
     }
   }
@@ -360,7 +355,8 @@ document.querySelector(".toggle-mode").onclick = function () {
 
 let phoneNumber = document.querySelector(".phoneNumber");
 
-phoneNumber.addEventListener('click', () => {
-    window.navigator.clipboard.writeText("+20 1009641196")
-  alert('copied the phone number!')
-})
+phoneNumber.addEventListener("click", () => {
+  window.navigator.clipboard.writeText("+20 1009641196").then(() => {
+    alert("copied!");
+  });
+});

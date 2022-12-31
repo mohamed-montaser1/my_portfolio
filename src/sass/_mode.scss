@@ -3,108 +3,37 @@
 body.light {
   background-color: #fafafa !important;
   .navbar {
-    z-index: 1000000000000000000000000;
     background-color: #fafafa;
-    height: 100px;
     border-bottom: 1px solid $main-color;
-    transition: all 0.4s ease;
     .navbar-toggler {
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
-      &:hover {
-        transform: scale(1) !important;
-      }
       #navbar-toggler-icon {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         span {
-          width: 100%;
-          height: 2px;
           background: black;
-          position: absolute;
-          &:first-child {
-            left: 10px;
-            top: 0;
-          }
-          &:nth-child(2) {
-            left: 0px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-
-          &:last-child {
-            left: 10px;
-            bottom: 0;
-          }
         }
       }
     }
     .navbar-nav {
-      z-index: 10000000000;
       .nav-item {
         .nav-link {
-          font-weight: 800;
           &.active,
           &:hover {
             color: $secondary-color;
-            font-weight: 800;
           }
           color: #010101;
         }
       }
       .toggle-mode {
-        background: none;
         color: #010101;
-        padding-left: 13px;
-        margin-left: 9px;
-        &:hover {
-          transform: scale(1) !important;
-        }
       }
     }
   }
   .landing {
-    margin-top: 100px;
-    margin-bottom: 140px;
-    transform: translateY(100px);
-    position: relative;
     .container {
       .row {
         .col-sm-6 {
-          padding: 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: column;
           h1 {
             color: #010101;
-            width: 635px;
-            font-size: 2em;
-            span {
-              color: $secondary-color;
-            }
           }
-          .img-container {
-            width: 510px;
-            img {
-              width: 100%;
-              height: auto;
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 767px) {
-    .landing {
-      .container {
-        h1 {
-          text-align: center;
-          max-width: 300px;
         }
       }
     }
@@ -210,7 +139,8 @@ body.light {
       img.about-me {
         width: 100%;
         height: auto;
-        animation: top-bottom 3s steps(100, end) infinite;
+        animation: top-bottom 3s cubic-bezier(0.5, -0.51, 0.34, 1.61) infinite;
+
         position: relative;
       }
     }
@@ -356,12 +286,6 @@ body.light {
               color: white;
             }
           }
-          img {
-            width: 100%;
-            height: auto;
-            animation: top-bottom 3s ease-out infinite;
-            position: relative;
-          }
         }
       }
     }
@@ -409,53 +333,19 @@ body.dark {
   .navbar {
     background-color: $main-color;
     border-bottom: 1px solid #fafafa;
-    z-index: 1000000000000000000000000;
-    height: 100px;
-    transition: all 0.4s ease;
     .navbar-toggler {
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
-      &:hover {
-        transform: scale(1) !important;
-      }
       #navbar-toggler-icon {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         span {
-          width: 100%;
-          height: 2px;
           background: white;
-          position: absolute;
-          &:first-child {
-            left: 10px;
-            top: 0;
-          }
-          &:nth-child(2) {
-            left: 0px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-
-          &:last-child {
-            left: 10px;
-            bottom: 0;
-          }
         }
       }
     }
     .navbar-nav {
-      z-index: 10000000000;
       .nav-item {
         .nav-link {
-          font-weight: 800;
           &.active,
           &:hover {
             color: $secondary-color;
-            font-weight: 800;
           }
           color: white;
         }
@@ -464,55 +354,18 @@ body.dark {
         }
       }
       .toggle-mode {
-        background: none;
         color: white;
         border-left: 1px solid white !important;
-        padding-left: 13px;
-        margin-left: 9px;
-        &:hover {
-          transform: scale(1) !important;
-        }
       }
     }
   }
   .landing {
-    margin-top: 100px;
-    margin-bottom: 140px;
-    position: relative;
-    transform: translateY(100px);
     .container {
       .row {
         .col-sm-6 {
-          padding: 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: column;
           h1 {
             color: white;
-            width: 635px;
-            font-size: 2em;
-            span {
-              color: $secondary-color;
-            }
           }
-          .img-container {
-            width: 510px;
-            img {
-              width: 100%;
-              height: auto;
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 767px) {
-    .landing {
-      .container {
-        h1 {
-          text-align: center;
-          max-width: 300px;
         }
       }
     }
@@ -608,12 +461,6 @@ body.dark {
           width: 41px;
           margin-left: 10px;
         }
-      }
-      img.about-me {
-        width: 100%;
-        height: auto;
-        animation: top-bottom 3s steps(100, end) infinite;
-        position: relative;
       }
     }
   }
@@ -755,12 +602,6 @@ body.dark {
               font-weight: bold;
               color: white;
             }
-          }
-          img {
-            width: 100%;
-            height: auto;
-            animation: top-bottom 3s ease-out infinite;
-            position: relative;
           }
         }
       }
