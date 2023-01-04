@@ -377,6 +377,8 @@ body.dark {
       max-width: 369px;
       background-color: $secondary-color;
       border: none !important;
+      margin-left: 15px;
+
       svg {
         font-size: clamp(1rem, 30px, 2rem);
         color: white;
@@ -407,10 +409,6 @@ body.dark {
       margin-left: 10px;
     }
   }
-}
-
-section:not(.services, .contact) {
-  min-height: 100vh;
 }
 
 .navbar {
@@ -518,6 +516,26 @@ section:not(.services, .contact) {
   }
 }
 
+.work {
+  .see-more {
+    max-width: 384px;
+    height: 66px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    margin: 60px auto;
+    background-image: linear-gradient(to left, $r-color, $secondary-color);
+    color: white;
+    text-decoration: none;
+    img {
+      width: 30px;
+      margin-left: 20px;
+    }
+  }
+}
+
 body.dark {
   .contact {
     .contact-heading + p {
@@ -541,4 +559,9 @@ footer {
       }
     }
   }
+}
+
+button:hover,
+.see-more:hover {
+  opacity: 0.9;
 }

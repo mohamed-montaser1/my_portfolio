@@ -1,11 +1,12 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@fortawesome/fontawesome-free/js/all.min";
+import "@fortawesome/fontawesome-free/js/all.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min";
-import "jquery/dist/jquery.min";
+import "bootstrap/dist/js/bootstrap.min.js";
+import "jquery/dist/jquery.min.js";
 import "loaders.css/loaders.min.css";
-import "popper.js/dist/popper.min";
+import "popper.js/dist/popper.min.js";
 import "../sass/style.scss";
+import "./remove_inspect";
 
 let nav_links = document.querySelectorAll(".navbar ul li a");
 nav_links.forEach((link) => {
@@ -227,7 +228,6 @@ for (var i = 0; i < work_filtered_list_btns.length; i++) {
   work_filtered_list_btns[i].addEventListener("click", (e) => {
     e.preventDefault();
     const filter = e.target.dataset.filter;
-    console.log(filter);
     work_cards.forEach((work_card) => {
       if (filter == "all") {
         work_card.style.display = "block";
@@ -250,11 +250,6 @@ Array.from(work_filtered_list_btns).forEach((btn) => {
     this.classList.add("active");
   };
 });
-
-let ghButton = document.querySelector(".see-more");
-ghButton.onclick = function () {
-  window.location.href = "http://github.com/mohamed-montaser1/";
-};
 
 let year = document.querySelector("footer p");
 year.innerHTML = `COPYRIGHT&copy; MOHAMED MONTASER ${new Date().getFullYear()}. All rights
@@ -344,9 +339,9 @@ let mood_status = false;
 document.querySelector(".toggle-mode").onclick = function () {
   if (window.innerWidth > 991) {
     if (!mood_status) {
-      document.querySelector(".hint").style.display = "flex";
+      document.querySelector(".hint").style.opacity = "1";
       setTimeout(() => {
-        document.querySelector(".hint").style.display = "none";
+        document.querySelector(".hint").style.opacity = "0";
       }, 700);
       mood_status = true;
     }
@@ -359,4 +354,23 @@ phoneNumber.addEventListener("click", () => {
   window.navigator.clipboard.writeText("+20 1009641196").then(() => {
     alert("copied!");
   });
+});
+
+let observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("intersection");
+      }
+    });
+  },
+  {
+    /* options */
+  }
+);
+
+let hidden = document.querySelectorAll(".hidden");
+
+hidden.forEach((elem) => {
+  observer.observe(elem);
 });

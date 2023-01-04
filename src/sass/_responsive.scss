@@ -181,3 +181,23 @@
     }
   }
 }
+
+@media (max-width: 363px) {
+  .pricing-cards__container__card {
+    width: 90%;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 336px) {
+  .pricing-cards__container__card {
+    width: 70%;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 322px) {
+  .pricing-cards__container__card {
+    margin-right: 40px;
+  }
+}

@@ -140,7 +140,6 @@ body.light {
         width: 100%;
         height: auto;
         animation: top-bottom 3s cubic-bezier(0.5, -0.51, 0.34, 1.61) infinite;
-
         position: relative;
       }
     }
@@ -238,18 +237,6 @@ body.light {
             }
           }
         }
-      }
-      button.see-more {
-        width: 384px;
-        height: 66px;
-        border-radius: 17px;
-        background-image: linear-gradient(to left, $r-color, $secondary-color);
-        color: white;
-        display: flex;
-        justify-content: center;
-        font-weight: bold;
-        align-items: center;
-        margin: 60px auto;
       }
     }
   }
@@ -440,6 +427,12 @@ body.dark {
           right: 0;
         }
       }
+      img.about-me {
+        width: 100%;
+        height: auto;
+        animation: top-bottom 3s cubic-bezier(0.5, -0.51, 0.34, 1.61) infinite;
+        position: relative;
+      }
       p {
         line-height: 2;
         a {
@@ -557,54 +550,11 @@ body.dark {
           }
         }
       }
-      button.see-more {
-        width: 384px;
-        height: 66px;
-        border-radius: 17px;
-        background-image: linear-gradient(to left, $r-color, $secondary-color);
-        color: white;
-        display: flex;
-        justify-content: center;
-        font-weight: bold;
-        align-items: center;
-        margin: 60px auto;
-      }
     }
   }
   .contact {
     .container {
       margin-top: 30px;
-      .row {
-        .col-sm-12 {
-          form {
-            .col-sm-12 {
-              margin: 6px 0;
-              input,
-              textarea {
-                font-weight: bold;
-                padding: 10px;
-                background-color: #e4e5f1 !important;
-              }
-              textarea {
-                min-height: 200px;
-              }
-            }
-            button#submit {
-              width: 108px;
-              height: 52px;
-              border-radius: 10px;
-              background-image: linear-gradient(
-                to left,
-                $r-color,
-                $secondary-color
-              );
-              font-size: 18px;
-              font-weight: bold;
-              color: white;
-            }
-          }
-        }
-      }
     }
   }
   footer {
