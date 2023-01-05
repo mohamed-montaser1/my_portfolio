@@ -1,6 +1,5 @@
 @import "./variables";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
-
 :root {
   --scroll-bar: 15px;
 }
@@ -176,6 +175,7 @@ section {
   font-size: 50px;
   opacity: 0;
   transition: all 0.4s ease-in-out;
+  display: none;
 }
 
 .hidden {
@@ -186,3 +186,4 @@ section {
 .intersection {
   opacity: 1;
 }
+

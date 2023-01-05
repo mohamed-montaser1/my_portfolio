@@ -6,7 +6,7 @@ import "jquery/dist/jquery.min.js";
 import "loaders.css/loaders.min.css";
 import "popper.js/dist/popper.min.js";
 import "../sass/style.scss";
-import "./remove_inspect";
+import "./remove_inspect"
 
 let nav_links = document.querySelectorAll(".navbar ul li a");
 nav_links.forEach((link) => {
@@ -209,14 +209,16 @@ setInterval(() => {
 }, 1);
 let toggle_mode = document.querySelector(".toggle-mode");
 var mode_status = !1;
-toggle_mode.addEventListener("click", function (s) {
+toggle_mode.addEventListener("click", function (e) {
   mode_status
     ? mode_status &&
-      (document.body.classList.add("light"),
+      (window.localStorage.setItem("mood_status", false),
+      document.body.classList.add("light"),
       document.body.classList.remove("dark"),
       (toggle_mode.innerHTML = '<i class="fa-solid fa-cloud-sun"></i>'),
       (mode_status = !1))
-    : (document.body.classList.add("dark"),
+    : (window.localStorage.setItem("mood_status", true),
+      document.body.classList.add("dark"),
       document.body.classList.remove("light"),
       (toggle_mode.innerHTML = '<i class="fa-regular fa-moon"></i>'),
       (mode_status = !0));
@@ -335,16 +337,25 @@ document.body.addEventListener("keyup", (e) => {
   }
 });
 
-let mood_status = false;
+let local_status = false;
+
 document.querySelector(".toggle-mode").onclick = function () {
   if (window.innerWidth > 991) {
-    if (!mood_status) {
-      document.querySelector(".hint").style.opacity = "1";
+    if (!local_status) {
+      document.querySelector(".hint").style.display = "flex";
+      setTimeout(() => {
+        document.querySelector(".hint").style.opacity = "1";
+      }, 100);
+
       setTimeout(() => {
         document.querySelector(".hint").style.opacity = "0";
-      }, 700);
-      mood_status = true;
+      }, 800);
+
+      setTimeout(() => {
+        document.querySelector(".hint").style.display = "none";
+      }, 1000);
     }
+    local_status = true;
   }
 };
 
@@ -366,6 +377,7 @@ let observer = new IntersectionObserver(
   },
   {
     /* options */
+    threshold: 0.2,
   }
 );
 
