@@ -6,7 +6,7 @@ import "jquery/dist/jquery.min.js";
 import "loaders.css/loaders.min.css";
 import "popper.js/dist/popper.min.js";
 import "../sass/style.scss";
-import "./remove_inspect"
+// import "./remove_inspect";
 
 let nav_links = document.querySelectorAll(".navbar ul li a");
 nav_links.forEach((link) => {
@@ -19,8 +19,8 @@ nav_links.forEach((link) => {
 });
 
 var lis = document.querySelectorAll(".front-back li");
-lis.forEach(function (s) {
-  s.onclick = function () {
+lis.forEach(function (li) {
+  li.onclick = function () {
     lis.forEach(function (s) {
       s.classList.remove("active");
     }),
@@ -190,14 +190,15 @@ lis.forEach(function (s) {
       </div>
     </div>
       `);
-    let l = document.querySelectorAll(".skill-bar span");
+    let skillSpan = document.querySelectorAll(".skill-bar span");
     setTimeout(() => {
-      l.forEach((s) => {
+      skillSpan.forEach((s) => {
         s.style.width = s.dataset.val;
       });
     }, 100);
   };
 });
+
 let skillsSpans = document.querySelectorAll(".skill-bar span");
 let skills_section_top = document.querySelector(".skills").offsetTop;
 
@@ -207,26 +208,26 @@ setInterval(() => {
       s.style.width = s.dataset.val;
     });
 }, 1);
+
 let toggle_mode = document.querySelector(".toggle-mode");
 var mode_status = !1;
-toggle_mode.addEventListener("click", function (e) {
+toggle_mode.addEventListener("click", function () {
   mode_status
     ? mode_status &&
-      (window.localStorage.setItem("mood_status", false),
-      document.body.classList.add("light"),
+      (document.body.classList.add("light"),
       document.body.classList.remove("dark"),
       (toggle_mode.innerHTML = '<i class="fa-solid fa-cloud-sun"></i>'),
       (mode_status = !1))
-    : (window.localStorage.setItem("mood_status", true),
-      document.body.classList.add("dark"),
+    : (document.body.classList.add("dark"),
       document.body.classList.remove("light"),
       (toggle_mode.innerHTML = '<i class="fa-regular fa-moon"></i>'),
       (mode_status = !0));
 });
+
 let work_filtered_list_btns = document.querySelectorAll("#work-filter li");
 let work_cards = document.querySelectorAll("#work .container .row .col-sm-12");
 
-for (var i = 0; i < work_filtered_list_btns.length; i++) {
+for (let i = 0; i < work_filtered_list_btns.length; i++) {
   work_filtered_list_btns[i].addEventListener("click", (e) => {
     e.preventDefault();
     const filter = e.target.dataset.filter;
@@ -244,9 +245,9 @@ for (var i = 0; i < work_filtered_list_btns.length; i++) {
   });
 }
 
-Array.from(work_filtered_list_btns).forEach((btn) => {
+work_filtered_list_btns.forEach((btn) => {
   btn.onclick = function () {
-    Array.from(work_filtered_list_btns).forEach((btn) => {
+    work_filtered_list_btns.forEach((btn) => {
       btn.classList.remove("active");
     });
     this.classList.add("active");
@@ -259,16 +260,16 @@ reserved`;
 
 let layer = document.querySelector(".overview-layer-navbarnav"),
   navbar_toggler = document.querySelector(".navbar .navbar-toggler");
-navbar_toggler.addEventListener("click", (s) => {
-  (layer.style.display = "block"),
-    setTimeout(() => {
-      layer.style.opacity = "0.3";
-    }, 10),
-    (document.querySelector(".navbar .navbar-nav").style.right = "0"),
-    (document.querySelector("html").style.overflowY = "hidden");
+navbar_toggler.addEventListener("click", () => {
+  layer.style.display = "block";
+  setTimeout(() => {
+    layer.style.opacity = "0.3";
+  }, 10),
+    (document.querySelector(".navbar .navbar-nav").style.right = "0");
+  document.querySelector("html").style.overflowY = "hidden";
 }),
-  (document.body.onclick = function (s) {
-    s.target.classList.contains("overview-layer-navbarnav") &&
+  (document.body.onclick = function (e) {
+    e.target.classList.contains("overview-layer-navbarnav") &&
       ((document.querySelector(".navbar .navbar-nav").style.right = "-13rem"),
       (layer.style.opacity = "0"),
       setTimeout(() => {
@@ -280,7 +281,7 @@ navbar_toggler.addEventListener("click", (s) => {
 let navbar_links = Array.from(document.querySelectorAll(".navbar-nav li a"));
 
 navbar_links.forEach((link) => {
-  link.addEventListener("click", (e) => {
+  link.addEventListener("click", () => {
     if (window.innerWidth < 991) {
       let layer = document.querySelector(".overview-layer-navbarnav");
       layer.click();
@@ -290,8 +291,12 @@ navbar_links.forEach((link) => {
 
 let to_top_button = document.querySelector(".arrow-top");
 
-to_top_button.addEventListener("click", (e) => {
-  window.scrollTo(0, 0);
+to_top_button.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
 
 window.onscroll = function () {
@@ -307,7 +312,7 @@ let work_card = document.querySelectorAll(".work .card");
 setInterval(() => {
   if (window.innerWidth <= 991) {
     for (let i = 0; i < work_card.length; i++) {
-      work_card[i].addEventListener("mouseover", (e) => {
+      work_card[i].addEventListener("mouseover", () => {
         let lord_icon = document.querySelectorAll(
           `.work .card .overlay a lord-icon`
         );
@@ -326,14 +331,12 @@ setInterval(() => {
   }
 }, 1);
 
-// dark mode on press 'd' letter
+// dark mode on press 'd'/'ي' letter
 
 document.body.addEventListener("keyup", (e) => {
-  const elem = document.activeElement;
-  if (!elem.dataset.custom) {
-    if (e.key == "d") {
-      document.querySelector(".toggle-mode").click();
-    }
+  console.log(e.key);
+  if (e.key === "d" || e.key === "ي") {
+    document.querySelector(".toggle-mode").click();
   }
 });
 
